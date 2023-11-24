@@ -357,7 +357,7 @@
   .restaurant-text::before {
     content: "";
     position: absolute;
-    width: 50%;
+    width: 30px;
     height: 4px;
     background-color: $tertiary-color;
     bottom: -2px;
@@ -367,7 +367,6 @@
   .plat-container {
     @include plat-containerstyle;
     display: flex;
-  
     overflow: hidden;
     position: relative;
     align-items: center;
@@ -450,6 +449,10 @@
       }
     }
   }
+
+
+/******** Loader page index ********/
+
 
   .loader-container {
     position: fixed;

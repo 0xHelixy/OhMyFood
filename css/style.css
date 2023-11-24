@@ -524,7 +524,7 @@ picture source {
 .restaurant-text::before {
   content: "";
   position: absolute;
-  width: 50%;
+  width: 30px;
   height: 4px;
   background-color: #99e2d0;
   bottom: -2px;
@@ -670,6 +670,7 @@ picture source {
   cursor: pointer;
 }
 
+/******** Loader page index ********/
 .loader-container {
   position: fixed;
   top: 0;
