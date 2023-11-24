@@ -1,0 +1,229 @@
+/******** Paramètres par défaut ********/
+
+/******** Header par défaut ********/
+
+  
+  @mixin basic-header {
+    width: 100%;
+    height: 70px;
+    font-family: $heading-font;
+    font-size: map-get($font-size, large);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 20px;
+    position: relative;
+    .arrowicon {
+      position: absolute;
+      color: black;
+      bottom: 11px;
+      left: 16px;
+      :hover {
+        cursor: pointer;
+      }
+      @include tabletbp {
+        bottom: 16px;
+      }
+      @include desktopbp {
+        left: 25px;
+        bottom: 16px;
+      }
+      @include LGdesktopbp {
+        left: 20px;
+        bottom: 16px;
+      }
+    }
+  }
+  
+  
+  @mixin purplebtn {
+    width: 218px;
+    height: 50px;
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    background-color: $primary-color;
+    border-radius: 39px;
+    color: white;
+    text-align: center;
+    border: hidden;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 2s ease;
+  
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to bottom, $secondary-color, $lightened-color);
+      background-color: $lightened-color;
+      box-shadow: 0px 4px 6px rgba(48, 44, 44, 1);
+    }
+  
+    &:active {
+      background: linear-gradient(to bottom, $secondary-color, $lightened-color);
+      background-color: $lightened-color;
+      box-shadow: 0px 4px 6px rgba(48, 44, 44, 1);
+    }
+  }
+  
+/******** Button ********/  
+
+  @mixin howbutton {
+    width: 350px;
+    height: 70px;
+    border-radius: 25px;
+    background-color: $greytonelgt;
+    border: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  @mixin numberbtn {
+    width: 20px;
+    height: 20px;
+    background-color: $primary-color;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  @mixin newbtn {
+    width: 77px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: $tertiary-color;
+    border: hidden;
+    cursor: pointer;
+    text-align: center;
+    color: #3e9b83;
+    .newbuttontxt {
+      padding-top: 6px;
+      font-family: $primary-font;
+      font-style: bold;
+    }
+  }
+  
+/******** Coeur animation ********/  
+
+  @keyframes heartfill {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes heartfade {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+/******** Footer ********/
+  
+  @mixin footer {
+    .footer-box {
+      background-color: $footer;
+      color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .footer-title {
+      font-family: $heading-font;
+      padding-top: 10px;
+    }
+    .footer-list {
+      list-style: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  
+    .utensils {
+      color: white;
+    }
+    .handshake {
+      color: white;
+    }
+    #suggest {
+      padding-left: 5px;
+      color: white;
+    }
+    #become {
+      color: white;
+    }
+    .footer-link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+/******** Menu page restaurant ********/
+
+  
+  @mixin menubox {
+    width: 100%;
+    height: auto;
+    background-color: rgb(241, 242, 243);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  @mixin plat-containerstyle {
+    width: 100%;
+    background-color: white;
+    border-radius: 23px;
+    padding: 1em;
+    display: inline-block;
+    margin: 1em auto auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+/******** Slide plat ********/
+
+  
+  .slider {
+    background-color: $tertiary-color;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+  
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+  }
+  
+  .slider-tick-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .tick {
+    color: $tertiary-color;
+  }
+
+  
+
+
+  

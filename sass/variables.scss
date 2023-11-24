@@ -1,0 +1,61 @@
+/******** Couleurs ********/
+
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$lightened-color: lighten($primary-color, 20%);
+$greytone: #e1e3ecfa;
+$greytonelgt: rgb(241, 242, 243);
+$footer: rgb(91, 89, 89);
+
+/******** Police ********/
+$heading-font: "Shrikhand", sans-serif;
+$primary-font: "Roboto", sans-serif;
+
+/******** Epaisseur police ********/
+$font-weights: (
+  xsmall: 200,
+  small: 300,
+  medium: 400,
+  bold: 500,
+  extra-bold: 700,
+);
+
+/******** Taille police ********/
+$font-size: (
+  xsmall: 10px,
+  small: 15px,
+  medium: 20px,
+  large: 25px,
+  xlg: 30px,
+);
+
+/******** Responsive / Définition de la taille ********/
+
+$breakpoints: (
+  "tablet": 768px,
+  "desktop": 1024px,
+  "LGdesktop": 1200px,
+  "XLdesktop": 1920px,
+);
+
+@mixin tabletbp {
+  @media (min-width: map-get($breakpoints, "tablet")) {
+    @content;
+  }
+}
+@mixin desktopbp {
+  @media (min-width: map-get($breakpoints, "desktop")) {
+    @content;
+  }
+}
+@mixin LGdesktopbp {
+  @media (min-width: map-get($breakpoints, "LGdesktop")) {
+    @content;
+  }
+}
+@mixin XLdesktopbp {
+  @media (min-width: map-get($breakpoints, "XLdesktop")) {
+    @content;
+  }
+}

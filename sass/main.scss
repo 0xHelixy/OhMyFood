@@ -1,0 +1,453 @@
+/******** Import des paramètres ********/
+
+@import "./default.scss";
+@import "./variables.scss";
+@import "./styles.scss";
+
+/******** Header ********/
+
+.header-box {
+    @include basic-header;
+    box-shadow: 0px 0px 10px 0px black;
+    text-align: center;
+    position: relative;
+  }
+
+  .location-section {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  
+    .location-box {
+      text-align: center;
+      width: 100%;
+      padding-bottom: 10px;
+      background-color: $greytone;
+    }
+    .location-txt {
+      text-align: center;
+      border: none;
+      outline: none;
+      margin-top: 20px;
+      background-color: $greytone;
+    }
+  }
+
+/******** Presentation ********/
+
+.presentation-box {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: $greytonelgt;
+  
+    .prst-title {
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, medium);
+      text-align: center;
+    }
+  
+    .prst-txt {
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, xsmall);
+      text-align: center;
+      padding: 10px 10px 0 10px;
+    }
+  }
+  
+  .prst-btn {
+    @include purplebtn;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+/******** Fonctionnement ********/
+.fonctionnement {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    @include tabletbp {
+      padding-bottom: 25px;
+    }
+  
+    .fct-title {
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, medium);
+  
+      margin-top: 10px;
+      @include desktopbp {
+        text-align: center;
+      }
+    }
+  }
+  
+  .fct-btns {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 10px;
+    gap: 7%;
+  
+    @include desktopbp {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: auto;
+    }
+    @include LGdesktopbp {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .fct-btn {
+      @include howbutton;
+      position: relative;
+    }
+  
+    .fct-btn-number {
+      @include numberbtn;
+      position: absolute;
+      left: -9px;
+      padding-top: 2px;
+    }
+  }
+
+/******** Restaurants ********/
+
+.restaurants-box {
+    width: 100%;
+    background-color: $greytonelgt;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    @include desktopbp {
+      padding-left: 110px;
+      padding-right: 110px;
+      padding-bottom: 110px;
+    }
+  
+    .restaurants-title {
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, medium);
+      margin-left: 15px;
+      padding-top: 20px;
+      @include desktopbp {
+        text-align: center;
+      }
+    }
+  
+    .restaurant-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+  
+      @include desktopbp {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+      }
+      @include XLdesktopbp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        padding-top: 40px;
+      }
+    }
+  
+    .rst-card {
+      max-width: 340px;
+      height: 250px;
+      background-color: white;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0px 0px 10px 0px gray;
+      position: relative;
+  
+      .rst-card:hover {
+        box-shadow: 0px 0px 20px 0px gray;
+        transform: scale(1.05);
+      }
+    }
+  
+    .rst-image {
+      width: 100%;
+      height: 65%;
+      overflow: hidden;
+    }
+  }
+  
+  .rest_img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
+  .rst-button-new {
+    @include newbtn;
+    position: absolute;
+    bottom: 200px;
+    left: 68%;
+  }
+  
+  .rst-txt {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-left: 1em;
+    position: relative;
+    width: 80%;
+  
+    .rst-name {
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, medium);
+      color: black;
+    }
+    .rst-location {
+      padding-top: 0.5em;
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, xsmall);
+      color: black;
+    }
+  }
+  .lowerthird {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .heart-icon {
+    padding-top: 9%;
+    padding-left: 3%;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .heartempty {
+    cursor: pointer;
+    font-size: x-large;
+    position: absolute;
+    color: gray;
+    background-color: white;
+  
+    &:hover {
+      animation: heartfade 0s forwards;
+    }
+    &:checked {
+      animation: heartfade 0s forwards;
+    }
+  }
+  
+  .heartfull {
+    font-size: x-large;
+    position: absolute;
+    background-color: transparent;
+    background-image: linear-gradient(to top, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    display: inline-block; 
+  }
+
+/******** Restaurant page ********/
+
+  .headerbox {
+    padding-bottom: 10px;
+  }
+  
+  .page-container {
+    width: 100%;
+    position: relative;
+  }
+  
+  .restaurant-image {
+    position: relative;
+  }
+  
+  .large_img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .restaurant-menu {
+    @include menubox;
+    margin-top: 160px;
+    padding-bottom: 20px;
+    margin-top: 195px;
+    overflow: hidden;
+    @include tabletbp {
+      margin-top: 375px;
+    }
+    @include desktopbp {
+      margin-top: 500px;
+    }
+    @include LGdesktopbp {
+      margin-top: 593px;
+    }
+  }
+  
+  .restaurant-header {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .menuheart-icon {
+    justify-content: flex-end;
+  
+    .menuheartempty {
+      background-color: rgb(241, 242, 243);
+    }
+  }
+  
+  .restaurant-title {
+    font-family: $heading-font;
+    font-size: map-get($font-size, large);
+    width: 90%;
+    @include tabletbp {
+      width: 93%;
+    }
+  }
+  
+  .menu-container .plat-container {
+    &:nth-child(1) {
+      animation: fadein 0.5s ease forwards;
+    }
+  
+    &:nth-child(2) {
+      animation: fadein 1s ease forwards;
+    }
+  
+    &:nth-child(3) {
+      animation: fadein 1.5s ease forwards;
+    }
+    &:nth-child(4) {
+      animation: fadein 2s ease forwards;
+    }
+  }
+  
+  .entrees {
+    margin-top: 10px;
+    font-weight: map-get($font-weights, xsmall);
+    display: inline-block;
+    color: black;
+  }
+  
+  .restaurant-text {
+    position: relative;
+  }
+  
+  .restaurant-text::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: $tertiary-color;
+    bottom: -2px;
+    left: 0;
+  }
+  
+  .plat-container {
+    @include plat-containerstyle;
+    display: flex;
+  
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &:hover .slider {
+      transform: translateX(0);
+    }
+    &:hover .plat-content {
+      margin-right: 30%;
+    }
+  }
+  
+  
+  .plat-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    flex-grow: 1;
+    width: 100%;
+  }
+  
+  .plat-side {
+    font-family: $primary-font;
+    font-weight: map-get($font-weights, xsmall);
+    font-size: map-get($font-size, small);
+    padding-top: 7px;
+    &:hover {
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  .plat-price {
+    padding-top: 5%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+  
+    @include tabletbp {
+      padding-top: 2%;
+    }
+    @include LGdesktopbp {
+      padding-top: 1%;
+    }
+  }
+  
+  .maindish {
+    margin-top: 20px;
+    font-weight: map-get($font-weights, xsmall);
+  }
+  
+
+  
+  .desserts {
+    margin-top: 20px;
+    font-weight: map-get($font-weights, xsmall);
+  }
+  
+  .orderbutton {
+    @include purplebtn;
+    margin-top: 10px;
+    display: block;
+    margin: 30px auto auto;
+  }
+
+/******** Footer ********/
+
+.footer {
+    @include footer;
+    .footer-link {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
