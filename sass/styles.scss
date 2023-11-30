@@ -126,16 +126,49 @@
       color: white;
       padding-left: 20px;
       padding-right: 20px;
+         @include desktopbp {
+          height: 120px;
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: flex-end;
+          
+      }
+        @include LGdesktopbp {
+          height: 120px;
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: flex-end;
+
+      }
     }
   
     .footer-title {
       font-family: $heading-font;
-      padding-top: 10px;
+      padding-top: 10px; 
+      @include desktopbp {
+        padding-bottom: 5px; 
     }
+      @include LGdesktopbp {
+        padding-bottom: 5px; 
+    }
+    }
+    
+
     .footer-list {
       list-style: none;
       padding-top: 10px;
       padding-bottom: 10px;
+        @include desktopbp {
+          display: flex;
+          gap: 1rem;
+          margin-right: 50px;
+      }
+        @include LGdesktopbp {
+          display: flex;
+          gap: 1rem;
+          margin-right: 50px;
+
+      }
     }
   
     .utensils {
@@ -223,7 +256,26 @@
     color: $tertiary-color;
   }
 
+  .plat-container:hover .slider {
+    @include desktopbp {
+    }
+    right: 0; /* Slide in from the right */
+    .tick {
+      animation: rotate 0.5s linear forwards;
+      -webkit-animation: rotate 0.5s linear forwards;
+      -moz-animation: rotate 0.5s linear forwards;
+    }
+  }
   
-
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   

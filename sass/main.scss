@@ -42,17 +42,10 @@
     padding: 10px;
     background-color: $greytonelgt;
   
-    .prst-title {
+    .rst-title {
       font-family: $primary-font;
       font-weight: map-get($font-weights, medium);
       text-align: center;
-    }
-  
-    .prst-txt {
-      font-family: $primary-font;
-      font-weight: map-get($font-weights, xsmall);
-      text-align: center;
-      padding: 10px 10px 0 10px;
     }
   }
   
@@ -211,19 +204,22 @@
     padding-left: 1em;
     position: relative;
     width: 80%;
-  
-    .rst-name {
-      font-family: $primary-font;
-      font-weight: map-get($font-weights, medium);
-      color: black;
-    }
-    .rst-location {
-      padding-top: 0.5em;
-      font-family: $primary-font;
-      font-weight: map-get($font-weights, xsmall);
-      color: black;
-    }
+
   }
+
+  
+  .rst-name {
+    font-family: $primary-font;
+    font-weight: map-get($font-weights, medium);
+    color: black;
+  }
+  .rst-location {
+    padding-top: 0.5em;
+    font-family: $primary-font;
+    font-weight: map-get($font-weights, xsmall);
+    color: black;
+  }
+
   .lowerthird {
     display: flex;
     flex-direction: row;
@@ -373,6 +369,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    overflow: hidden;
     &:hover .slider {
       transform: translateX(0);
     }
@@ -381,27 +378,40 @@
     }
   }
   
-  
-  .plat-box {
+  .plat-content {
+    width: 70%;
     display: flex;
-    flex-direction: column;
-    margin-right: 10px;
+    align-items: center;
     flex-grow: 1;
-    width: 100%;
+    transition: margin-right 0.5s ease-in-out;
   }
-  
-  .plat-side {
-    font-family: $primary-font;
-    font-weight: map-get($font-weights, xsmall);
-    font-size: map-get($font-size, small);
-    padding-top: 7px;
-    &:hover {
-      max-width: 200px;
-      white-space: nowrap;
+
+  .plat-box {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+      flex-grow: 1;
+      width: 50%;
+      .plat-name {
+        font-weight: map-get($font-weights, bold);
+        font-size: map-get($font-size, small);
+        font-family: $primary-font;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .plat-side {
+      font-family: $primary-font;
+      font-weight: map-get($font-weights, xsmall);
+      font-size: map-get($font-size, xxsmall);
+      padding-top: 7px;
       overflow: hidden;
+      white-space: nowrap;
       text-overflow: ellipsis;
     }
-  }
+
   
   .plat-price {
     padding-top: 5%;
@@ -515,3 +525,33 @@
       visibility: hidden;
     }
   }
+
+
+.middle-menu .plat-container {
+  &:nth-child(1) {
+    animation: fadein 2s ease forwards;
+  }
+
+  &:nth-child(2) {
+    animation: fadein 2.5s ease forwards;
+  }
+
+  &:nth-child(3) {
+    animation: fadein 3s ease forwards;
+  }
+}
+
+  .menu-desserts .plat-container {
+    &:nth-child(1) {
+      animation: fadein 3.5s ease forwards;
+    }
+  
+    &:nth-child(2) {
+      animation: fadein 4s ease forwards;
+    }
+  
+    &:nth-child(3) {
+      animation: fadein 4.5s ease forwards;
+    }
+
+}

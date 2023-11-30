@@ -88,6 +88,25 @@ picture source {
   color: #99e2d0;
 }
 
+.plat-container:hover .slider {
+  right: 0; /* Slide in from the right */
+}
+.plat-container:hover .slider .tick {
+  animation: rotate 0.5s linear forwards;
+  -webkit-animation: rotate 0.5s linear forwards;
+  -moz-animation: rotate 0.5s linear forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /******** Header ********/
 .header-box {
   width: 100%;
@@ -157,16 +176,10 @@ picture source {
   padding: 10px;
   background-color: rgb(241, 242, 243);
 }
-.presentation-box .prst-title {
+.presentation-box .rst-title {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-align: center;
-}
-.presentation-box .prst-txt {
-  font-family: "Roboto", sans-serif;
-  font-weight: 200;
-  text-align: center;
-  padding: 10px 10px 0 10px;
 }
 
 .prst-btn {
@@ -371,12 +384,14 @@ picture source {
   position: relative;
   width: 80%;
 }
-.rst-txt .rst-name {
+
+.rst-name {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: black;
 }
-.rst-txt .rst-location {
+
+.rst-location {
   padding-top: 0.5em;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
@@ -546,6 +561,7 @@ picture source {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  overflow: hidden;
 }
 .plat-container:hover .slider {
   transform: translateX(0);
@@ -554,24 +570,36 @@ picture source {
   margin-right: 30%;
 }
 
+.plat-content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  transition: margin-right 0.5s ease-in-out;
+}
+
 .plat-box {
   display: flex;
   flex-direction: column;
   margin-right: 10px;
   flex-grow: 1;
-  width: 100%;
+  width: 50%;
+}
+.plat-box .plat-name {
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .plat-side {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
-  font-size: 15px;
   padding-top: 7px;
-}
-.plat-side:hover {
-  max-width: 200px;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -640,14 +668,54 @@ picture source {
   padding-left: 20px;
   padding-right: 20px;
 }
+@media (min-width: 1024px) {
+  .footer .footer-box {
+    height: 120px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-box {
+    height: 120px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
 .footer .footer-title {
   font-family: "Shrikhand", sans-serif;
   padding-top: 10px;
+}
+@media (min-width: 1024px) {
+  .footer .footer-title {
+    padding-bottom: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-title {
+    padding-bottom: 5px;
+  }
 }
 .footer .footer-list {
   list-style: none;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+@media (min-width: 1024px) {
+  .footer .footer-list {
+    display: flex;
+    gap: 1rem;
+    margin-right: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .footer-list {
+    display: flex;
+    gap: 1rem;
+    margin-right: 50px;
+  }
 }
 .footer .utensils {
   color: white;
@@ -744,6 +812,25 @@ picture source {
     opacity: 0;
     visibility: hidden;
   }
+}
+.middle-menu .plat-container:nth-child(1) {
+  animation: fadein 2s ease forwards;
+}
+.middle-menu .plat-container:nth-child(2) {
+  animation: fadein 2.5s ease forwards;
+}
+.middle-menu .plat-container:nth-child(3) {
+  animation: fadein 3s ease forwards;
+}
+
+.menu-desserts .plat-container:nth-child(1) {
+  animation: fadein 3.5s ease forwards;
+}
+.menu-desserts .plat-container:nth-child(2) {
+  animation: fadein 4s ease forwards;
+}
+.menu-desserts .plat-container:nth-child(3) {
+  animation: fadein 4.5s ease forwards;
 }
 
 /*# sourceMappingURL=style.css.map */
