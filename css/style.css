@@ -445,6 +445,12 @@ picture source {
   width: 100%;
   position: relative;
 }
+@media (min-width: 1200px) {
+  .page-container {
+    width: 80%;
+    margin: auto;
+  }
+}
 
 .restaurant-image {
   position: relative;
@@ -457,6 +463,18 @@ picture source {
   object-fit: cover;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+@media (min-width: 1024px) {
+  .large_img {
+    width: 100%;
+    height: 420px;
+  }
+}
+@media (min-width: 1200px) {
+  .large_img {
+    width: 100%;
+    height: 420px;
+  }
 }
 
 .restaurant-menu {
@@ -480,12 +498,12 @@ picture source {
 }
 @media (min-width: 1024px) {
   .restaurant-menu {
-    margin-top: 500px;
+    margin-top: 350px;
   }
 }
 @media (min-width: 1200px) {
   .restaurant-menu {
-    margin-top: 593px;
+    margin-top: 350px;
   }
 }
 
