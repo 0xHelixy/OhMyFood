@@ -60,19 +60,22 @@
     width: 100%;
     height: auto;
     background-color: white;
-    padding-left: 5%;
-    padding-right: 5%;
     @include tabletbp {
       padding-bottom: 25px;
+    }
+    @include desktopbp {
+      padding-bottom: 25px;
+      padding-left: 110px;
+      padding-right: 110px;
     }
   
     .fct-title {
       font-family: $primary-font;
-      font-weight: map-get($font-weights, medium);
-  
+      font-weight: map-get($font-weights, extra-bold);
       margin-top: 10px;
+      padding-left: 20px;
       @include desktopbp {
-        text-align: center;
+        text-align: start;
       }
     }
   }
@@ -124,14 +127,19 @@
       padding-right: 110px;
       padding-bottom: 110px;
     }
+    @include LGdesktopbp {
+      padding-left: 110px;
+      padding-right: 110px;
+      padding-bottom: 110px;
+    }
   
     .restaurants-title {
       font-family: $primary-font;
-      font-weight: map-get($font-weights, medium);
-      margin-left: 15px;
+      font-weight: map-get($font-weights, extra-bold);
       padding-top: 20px;
+      padding-left: 20px;
       @include desktopbp {
-        text-align: center;
+        text-align: start;
       }
     }
   
@@ -152,11 +160,12 @@
         align-items: center;
       }
       @include XLdesktopbp {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 100px;
-        padding-top: 40px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
       }
     }
   
@@ -168,6 +177,15 @@
       border-radius: 25px;
       box-shadow: 0px 0px 10px 0px gray;
       position: relative;
+      @include desktopbp {
+        max-width: 580px;
+      }
+      @include XLdesktopbp {
+        max-width: 580px;
+      }
+      @include tabletbp {
+        max-width: 580px;
+      }
   
       .rst-card:hover {
         box-shadow: 0px 0px 20px 0px gray;
@@ -210,7 +228,7 @@
   
   .rst-name {
     font-family: $primary-font;
-    font-weight: map-get($font-weights, medium);
+    font-weight: map-get($font-weights, extra-bold);
     color: black;
   }
   .rst-location {
@@ -227,9 +245,18 @@
   
   .heart-icon {
     padding-top: 9%;
-    padding-left: 3%;
+    padding-left: 7%;
     position: relative;
     cursor: pointer;
+    @include desktopbp {
+      padding-top: 5%;
+      padding-left: 8%;
+    }
+    @include tabletbp {
+      padding-top: 5%;
+      padding-left: 9%;
+    }
+
   }
   
   .heartempty {
@@ -326,9 +353,9 @@
     }
   }
   
-  .restaurant-title {
+  .restaurants-title {
     font-family: $heading-font;
-    font-size: map-get($font-size, large);
+    font-size: map-get($font-size, extra-bold);
     width: 90%;
     @include tabletbp {
       width: 93%;

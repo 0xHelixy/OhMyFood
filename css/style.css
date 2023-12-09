@@ -214,22 +214,28 @@ picture source {
   width: 100%;
   height: auto;
   background-color: white;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 @media (min-width: 768px) {
   .fonctionnement {
     padding-bottom: 25px;
   }
 }
+@media (min-width: 1024px) {
+  .fonctionnement {
+    padding-bottom: 25px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
 .fonctionnement .fct-title {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin-top: 10px;
+  padding-left: 20px;
 }
 @media (min-width: 1024px) {
   .fonctionnement .fct-title {
-    text-align: center;
+    text-align: start;
   }
 }
 
@@ -292,15 +298,22 @@ picture source {
     padding-bottom: 110px;
   }
 }
+@media (min-width: 1200px) {
+  .restaurants-box {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 110px;
+  }
+}
 .restaurants-box .restaurants-title {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  margin-left: 15px;
+  font-weight: 700;
   padding-top: 20px;
+  padding-left: 20px;
 }
 @media (min-width: 1024px) {
   .restaurants-box .restaurants-title {
-    text-align: center;
+    text-align: start;
   }
 }
 .restaurants-box .restaurant-box {
@@ -323,11 +336,12 @@ picture source {
 }
 @media (min-width: 1920px) {
   .restaurants-box .restaurant-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 100px;
-    padding-top: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
   }
 }
 .restaurants-box .rst-card {
@@ -338,6 +352,21 @@ picture source {
   border-radius: 25px;
   box-shadow: 0px 0px 10px 0px gray;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .restaurants-box .rst-card {
+    max-width: 580px;
+  }
+}
+@media (min-width: 1920px) {
+  .restaurants-box .rst-card {
+    max-width: 580px;
+  }
+}
+@media (min-width: 768px) {
+  .restaurants-box .rst-card {
+    max-width: 580px;
+  }
 }
 .restaurants-box .rst-card .rst-card:hover {
   box-shadow: 0px 0px 20px 0px gray;
@@ -387,7 +416,7 @@ picture source {
 
 .rst-name {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   color: black;
 }
 
@@ -405,9 +434,21 @@ picture source {
 
 .heart-icon {
   padding-top: 9%;
-  padding-left: 3%;
+  padding-left: 7%;
   position: relative;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .heart-icon {
+    padding-top: 5%;
+    padding-left: 8%;
+  }
+}
+@media (min-width: 768px) {
+  .heart-icon {
+    padding-top: 5%;
+    padding-left: 9%;
+  }
 }
 
 .heartempty {
@@ -519,13 +560,12 @@ picture source {
   background-color: rgb(241, 242, 243);
 }
 
-.restaurant-title {
+.restaurants-title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 25px;
   width: 90%;
 }
 @media (min-width: 768px) {
-  .restaurant-title {
+  .restaurants-title {
     width: 93%;
   }
 }
