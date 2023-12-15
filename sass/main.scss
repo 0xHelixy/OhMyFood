@@ -213,6 +213,12 @@
     position: absolute;
     bottom: 200px;
     left: 68%;
+    @include desktopbp {
+      left: 80%;
+    }
+    @include tabletbp {
+      left: 80%;
+    }
   }
   
   .rst-txt {
@@ -295,9 +301,12 @@
   .page-container {
     width: 100%;
     position: relative;
-
+    @include desktopbp {
+      width: 70%;
+      margin: auto;
+    }
     @include LGdesktopbp {
-      width: 80%;
+      width: 70%;
       margin: auto;
     }
   }
@@ -342,11 +351,14 @@
   
   .restaurant-header {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   
   .menuheart-icon {
     justify-content: flex-end;
+    margin-bottom: 23px;
+    margin-left: 10px;
   
     .menuheartempty {
       background-color: rgb(241, 242, 243);
@@ -398,6 +410,13 @@
     background-color: $tertiary-color;
     bottom: -2px;
     left: 0;
+  }
+
+  .restaurant-title {
+    font-family: $heading-font;
+    font-size: map-get($font-size, large);
+    @include tabletbp {
+    }
   }
   
   .plat-container {

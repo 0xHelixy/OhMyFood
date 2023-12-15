@@ -404,6 +404,16 @@ picture source {
   font-family: "Roboto", sans-serif;
   font-style: bold;
 }
+@media (min-width: 1024px) {
+  .rst-button-new {
+    left: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .rst-button-new {
+    left: 80%;
+  }
+}
 
 .rst-txt {
   display: flex;
@@ -486,9 +496,15 @@ picture source {
   width: 100%;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .page-container {
+    width: 70%;
+    margin: auto;
+  }
+}
 @media (min-width: 1200px) {
   .page-container {
-    width: 80%;
+    width: 70%;
     margin: auto;
   }
 }
@@ -550,11 +566,14 @@ picture source {
 
 .restaurant-header {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .menuheart-icon {
   justify-content: flex-end;
+  margin-bottom: 23px;
+  margin-left: 10px;
 }
 .menuheart-icon .menuheartempty {
   background-color: rgb(241, 242, 243);
@@ -604,6 +623,10 @@ picture source {
   left: 0;
 }
 
+.restaurant-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 25px;
+}
 .plat-container {
   width: 100%;
   background-color: white;
