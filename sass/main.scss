@@ -273,10 +273,7 @@
     background-color: white;
   
     &:hover {
-      animation: heartfade 0s forwards;
-    }
-    &:checked {
-      animation: heartfade 0s forwards;
+      animation: heartfade 1.5s forwards;
     }
   }
   
